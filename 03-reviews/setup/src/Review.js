@@ -7,6 +7,27 @@ const Review = () => {
   const {name, job, image, text} = people[index]
   console.log(people);
 
+  const checkNumber = (number) => {
+    if(number > people.length-1){
+      return 0;
+    }
+    if(number < 0) {
+      return people.length - 1;
+    }
+    return number;
+  }
+
+  const nextPerson = () => {
+    setIndex((index) => {
+      return checkNumber(index + 1)
+    })
+  }
+  const prevPerson = () => {
+    setIndex((index) => {
+      return checkNumber(index - 1)
+    })
+  }
+
   return <article className="review">
     <div className="img-container">
       <img src={image} alt={name} className="person-img" />
@@ -18,10 +39,10 @@ const Review = () => {
     <p className="job">{job}</p>
     <p className="info">{text}</p>
     <div className="button-container">
-      <button className="next-btn">
+      <button className="next-btn" onClick={prevPerson}>
         <FaChevronLeft />
       </button>
-      <button className="prev-btn">
+      <button className="prev-btn" onClick={nextPerson}>
         <FaChevronRight />
       </button>
     </div>
