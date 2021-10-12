@@ -1,8 +1,19 @@
 import React from 'react';
 import Review from './Review';
-import {FaGithub} from "react-icons/fa";
 function App() {
-  return <h2>reviews project setup <FaGithub className="icon" /></h2>;
+  return (
+    <main>
+      <section>
+        <div className="container">
+          <div className="title">
+            <h2>Our reviews</h2>
+            <div className="underline"></div>
+          </div>
+        </div>
+        <Review />
+      </section>
+    </main>
+  );
 }
 
 export default App;
