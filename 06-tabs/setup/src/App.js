@@ -38,6 +38,15 @@ function App() {
       </div>
       <div className="job-center">
         {/* btn container */}
+        <div className="btn-container">
+          {jobs.map(( job, index ) => {
+            return (
+              <button key={index} className={`job-btn ${index===value && 'active-btn'}`} onClick={() => setValue(index)}>
+                {job.company}
+              </button>
+            );
+          })}
+        </div>
         {/* job info */}
         <article className="job-info">
           <h3>{title}</h3>
@@ -45,7 +54,7 @@ function App() {
           <p className="job-date">{date}</p>
           {duties.map((duty, index) => {
             return (
-              <div className="job-desc">
+              <div className="job-desc" key={index}>
                 <FaAngleDoubleRight />
                 <p>{duty}</p>
               </div>
