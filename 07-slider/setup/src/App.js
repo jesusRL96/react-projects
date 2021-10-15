@@ -40,7 +40,7 @@ function App() {
             if (personIndex === index) {
               position = "activeSlide";
             }
-            if (personIndex === index-1 || (index == 0 && personIndex === people.length - 1)) {
+            if (personIndex === index-1 || (index === 0 && personIndex === people.length - 1)) {
               position = "lastSlide";
             }
 
