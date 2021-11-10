@@ -4,15 +4,14 @@ import {AppContext, useGlobalContext} from './context'
 
 
 const Home = () => {
-  const data = useGlobalContext();
-  console.log(data);
+  const {openSidebar, openModal} = useGlobalContext();
   return (
     <main>
-      <button className="sidebar-toggle">
+      <button className="sidebar-toggle" onClick={openSidebar}>
         <FaBars />
       </button>
   
-      <button className="btn">
+      <button className="btn" onClick={openModal}>
         show modal
       </button>
     </main>
