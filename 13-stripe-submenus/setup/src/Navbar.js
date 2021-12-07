@@ -4,7 +4,7 @@ import { FaBars } from 'react-icons/fa'
 import { useGlobalContext } from './context'
 
 const Navbar = () => {
-  const {openSidebar, openSubmenu, closeSubmenu} = useGlobalContext
+  const {openSidebar, openSubmenu, closeSubmenu} = useGlobalContext();
   return <nav className="nav">
     <div className="nav-center">
       <div className="nav-header">
