@@ -5,7 +5,7 @@ const AppContext = React.createContext();
 
 export const AppProvider = ({children}) => {
     const [isSidebarOpened, setSidebarOpened] = useState(false);
-    const [isSubmenuOpened, setSubmenuOpened] = useState(true);
+    const [isSubmenuOpened, setSubmenuOpened] = useState(false);
 
     const openSidebar = () => {
         setSidebarOpened(true);
